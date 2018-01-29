@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './listComponent/list.component';
+import { ListService } from './list.service';
 
 
 
@@ -17,7 +18,7 @@ import { ListComponent } from './listComponent/list.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

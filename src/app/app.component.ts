@@ -13,11 +13,9 @@ export class AppComponent {
   value: string;
 
 
-  constructor() {
-    let listService: ListService = new ListService();
+  constructor(private listService: ListService) {
+
     this.items = listService.getCharactersList();
-
-
   }
 
   showValue() {
