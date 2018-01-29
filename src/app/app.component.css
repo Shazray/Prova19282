@@ -1,0 +1,8 @@
+.stupidClass {
+    height: 50px;
+    width: 100px;
+    background-color: red;
+    border: solid;
+    border-color: blue;
+    cursor: pointer;
+}
