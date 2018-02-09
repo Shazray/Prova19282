@@ -5,8 +5,17 @@
     </h1>
 </div>
 
-<list [items]="items"></list>
+<list [items]="items" (itemSelectedChanged)=showElementChanged($event)></list>
 
 <input [(ngModel)]="value" />
 
 <div (click)="showValue()" class="stupidClass">Mostra valore</div>
+
+<div *ngIf="currentCharacter">
+    <br> Personaggio corrente
+    <br>
+    <div>type: {{ currentCharacter.type }}</div>
+    <div>name: {{ currentCharacter.name }}</div>
+    <div>age: {{ currentCharacter.age }}</div>
+
+</div>

@@ -11,11 +11,19 @@ export class AppComponent {
   title: string = "Hello Class";
   items: Character[] = [];
   value: string;
+  currentCharacter: Character;
 
 
   constructor(private listService: ListService) {
 
     this.items = listService.getCharactersList();
+  }
+
+  showElementChanged(Character: Character)
+  {
+    
+    this.currentCharacter = Character;
+    
   }
 
   showValue() {

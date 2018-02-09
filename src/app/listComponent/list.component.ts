@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Character } from '../character';
 
 @Component({
@@ -10,6 +10,11 @@ export class ListComponent {
     @Input()
     items: Character[] = [];
 
+    @Output()
+    itemSelectedChanged = new EventEmitter<Character>();
 
+    selectItem(item: Character) {
+        this.itemSelectedChanged.emit(item);
+    }
 
 }
