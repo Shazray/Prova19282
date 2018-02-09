@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from '../character';
+import { ComunicatorService } from '../comunicator.service';
 
 @Component({
-  selector: 'app-detail',
+  selector: 'detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
-export class DetailComponent implements OnInit {
+export class DetailComponent {
+  currentCharacter: Character;
 
-  constructor() { }
+  constructor(private comunicatorService: ComunicatorService) {
 
-  ngOnInit() {
+    comunicatorService.mySubject$.subscribe( (newValue: Character) => {
+
+      this.currentCharacter = newValue;
+
+    });
+
   }
-
 }

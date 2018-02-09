@@ -1,5 +1,6 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Character } from '../character';
+import { ComunicatorService } from '../comunicator.service';
 
 @Component({
     selector: 'list',
@@ -10,7 +11,7 @@ export class ListComponent {
     @Input()
     items: Character[] = [];
 
-    constructor(){
+    constructor(private comunicatorService: ComunicatorService){
     }
 
     ngOnInit(){
@@ -18,7 +19,8 @@ export class ListComponent {
     }
 
     selectItem(item: Character) {
-       // chiamo il next nel subject
+        // chiamo il net nel subject
+        this.comunicatorService.changeSubject(item);
     }
 
 }

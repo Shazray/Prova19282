@@ -22,7 +22,7 @@ export class AppComponent {
   showElementChanged(Character: Character)
   {
     
-    this.currentCharacter = Character;
+    //this.currentCharacter = Character;
     
   }
 
