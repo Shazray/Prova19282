@@ -10,11 +10,15 @@ export class ListComponent {
     @Input()
     items: Character[] = [];
 
-    @Output()
-    itemSelectedChanged = new EventEmitter<Character>();
+    constructor(){
+    }
+
+    ngOnInit(){
+        this.items.push(new Character());
+    }
 
     selectItem(item: Character) {
-        this.itemSelectedChanged.emit(item);
+       // chiamo il next nel subject
     }
 
 }
