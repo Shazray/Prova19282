@@ -9,8 +9,9 @@ import { DetailComponent } from './detail/detail.component';
 import { ComunicatorService } from './comunicator.service';
 import { AfterViewComponent } from './after-view/after-view.component';
 import { HeaderComponent } from './header/header.component';
+import { DemoRoutingModule } from './router/router.module';
 import { HomeComponent } from './home/home.component';
-
+ 
 
 
 @NgModule({
@@ -24,8 +25,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
-
+    FormsModule,
+    DemoRoutingModule
   ],
   providers: [ListService, ComunicatorService],
   bootstrap: [AppComponent]
