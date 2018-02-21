@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Router} from '@angular/router';
 import { Character } from '../character';
 import { ComunicatorService } from '../comunicator.service';
 import { ListService } from '../list.service';
@@ -11,7 +12,7 @@ export class ListComponent {
 
     items: Character[] = [];
 
-    constructor(private comunicatorService: ComunicatorService, private listService: ListService){
+    constructor(private router: Router, private listService: ListService){
     }
 
     ngOnInit(){
@@ -19,8 +20,8 @@ export class ListComponent {
     }
 
     selectItem(item: Character) {
-        // chiamo il net nel subject
-        this.comunicatorService.changeSubject(item);
+        this.router.navigate(['/detail/'+item.id]);
+
     }
 
 }

@@ -1,6 +1,8 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Character } from '../character';
 import { ComunicatorService } from '../comunicator.service';
+import { ListService } from '../list.service';
 
 @Component({
   selector: 'detail',
@@ -10,13 +12,12 @@ import { ComunicatorService } from '../comunicator.service';
 export class DetailComponent {
   currentCharacter: Character;
 
-  constructor(private comunicatorService: ComunicatorService) {
-
-    comunicatorService.mySubject$.subscribe( (newValue: Character) => {
-
-      this.currentCharacter = newValue;
-
-    });
-
+  constructor(private route: ActivatedRoute, private listService: ListService) {
+    this.route.params.subscribe(params => {
+      if (params['id'] != '' && params['id'] != null) {
+        this.currentCharacter = this.listService.getCharacterById(params['id']);
+      }
+    })
   }
+
 }
