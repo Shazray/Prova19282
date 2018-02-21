@@ -7,6 +7,8 @@ import { ListComponent } from './listComponent/list.component';
 import { ListService } from './list.service';
 import { DetailComponent } from './detail/detail.component';
 import { ComunicatorService } from './comunicator.service';
+import { AfterViewComponent } from './after-view/after-view.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -14,7 +16,9 @@ import { ComunicatorService } from './comunicator.service';
   declarations: [
     AppComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    AfterViewComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
