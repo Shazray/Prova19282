@@ -1,25 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
 
-const heroesRoutes: Routes = [
-    // { path: 'heroes', component: HeroListComponent },
-
-
-    //   { path: 'hero/:id', component: HeroDetailComponent }
+const routes: Routes = [
+    {path: "/home", component: HomeComponent},
+    {path: "", redirectTo: "/home", pathMatch: "full"}
 ];
+
+
 @NgModule({
-    imports:
-        [
-            RouterModule.forChild(heroesRoutes)
-        ],
+    imports: [
+        RouterModule.forChild(routes)
+    ],
 
-    exports:
-        [
-            RouterModule
-        ]
-
-
+    exports: [
+        RouterModule
+    ]
 })
-
-
 export class DemoRoutingModule { }

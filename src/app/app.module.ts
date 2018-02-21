@@ -9,6 +9,7 @@ import { DetailComponent } from './detail/detail.component';
 import { ComunicatorService } from './comunicator.service';
 import { AfterViewComponent } from './after-view/after-view.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     ListComponent,
     DetailComponent,
     AfterViewComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
