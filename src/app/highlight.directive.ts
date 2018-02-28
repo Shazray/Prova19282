@@ -1,10 +1,11 @@
-import { Directive, ElementRef, HostListener,Input } from '@angular/core';
+import { Directive, ElementRef, HostListener,Input, OnInit } from '@angular/core';
 /*#F016A0*/
 @Directive({
   selector: '[appHighlight]'
 })
-export class HighlightDirective {
+export class HighlightDirective{
 
+  
   @Input() highlightColor: string;
 
   constructor(private elem: ElementRef) {
