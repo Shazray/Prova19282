@@ -1,23 +1,25 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
-
+import { Directive, ElementRef, HostListener,Input } from '@angular/core';
+/*#F016A0*/
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
 
+  @Input() highlightColor: string;
+
   constructor(private elem: ElementRef) {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBackground('#F016A0');
+    this.setBackground(this.highlightColor);
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.elem.nativeElement.style.backgroundColor = null;
+    this.setBackground();
   }
 
 
-  setBackground(color: string) {
+  setBackground(color: string = null) {
     this.elem.nativeElement.style.background = color;
 
   }
