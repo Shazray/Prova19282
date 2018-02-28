@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
+import { AToFourPipe } from './a-to-four.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    AToFourPipe
   ],
   imports: [
     BrowserModule
