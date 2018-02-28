@@ -9,4 +9,6 @@ export class AppComponent {
   title = 'app';
 
   color: string = "#F016A0";
+
+  evilDad: boolean = true;
 }

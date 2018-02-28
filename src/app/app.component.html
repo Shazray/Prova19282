@@ -1,3 +1,16 @@
-<h1 [appHighlight]="color">
-    Welcome to {{ title }}!
+<h1 [appHighlight]="color" [defaultColor]="'cyan'">
+    {{title}}
 </h1>
+<div>
+    <div appHighlight [defaultColor]="'yellow'">
+        <div>
+            Che al mercato mio padre
+            <ng-container *ngIf="evilDad">
+                siccome cattivo
+            </ng-container> non comprò.
+        </div>
+    </div>
+    <div appHighlight>
+        <span>Comprò</span>
+    </div>
+</div>
