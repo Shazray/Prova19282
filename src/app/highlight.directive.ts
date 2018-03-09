@@ -1,5 +1,5 @@
-import { Directive, ElementRef, HostListener,Input, OnInit } from '@angular/core';
-/*#F016A0*/
+import { Directive, ElementRef, HostListener, Input, OnInit, OnChanges, DoCheck } from '@angular/core';
+
 @Directive({
   selector: '[appHighlight]'
 })

@@ -1,16 +1,15 @@
 <h1 [appHighlight]="color" [defaultColor]="'cyan'">
     {{title}}
 </h1>
+
 <div>
     <div appHighlight [defaultColor]="'yellow'">
         <div>
             Che al mercato mio padre
-            <ng-container *ngIf="evilDad">
-                siccome cattivo
-            </ng-container> non comprò.
+            <ng-container *ngIf="evilDad">siccome cattivo</ng-container> non comprò.
         </div>
     </div>
     <div appHighlight>
-        <span>{{'Comprò (Moia cit.)' | aToFour}}</span>
+        <span>{{'Comprò (Moia cit.)' | aToLetter:3 | uppercase}}</span>
     </div>
 </div>

@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'app works!';
 
-  color: string = "#F016A0";
+  color: string = "blue";
 
-  evilDad: boolean = true;
+  evilDad:boolean = true;
 }
